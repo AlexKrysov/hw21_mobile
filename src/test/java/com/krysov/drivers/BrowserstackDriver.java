@@ -1,12 +1,10 @@
 package com.krysov.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import io.appium.java_client.android.AndroidDriver;
 import lombok.SneakyThrows;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import javax.annotation.Nonnull;
@@ -19,7 +17,6 @@ public class BrowserstackDriver implements WebDriverProvider {
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
         MutableCapabilities mutableCapabilities = new MutableCapabilities();
         mutableCapabilities.merge(capabilities);
-
         // Set your access credentials
         mutableCapabilities.setCapability("browserstack.user", "bsuser_5RrJHY");
         mutableCapabilities.setCapability("browserstack.key", "6qWGL8voxjU8mAxL4sCC");
